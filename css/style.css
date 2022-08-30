@@ -1413,10 +1413,6 @@ nav>ul>li>a:hover {
     background-color: #ddd;
 }
 
-#videos .container .box .video iframe {
-    height: 60vh;
-    width: 100%;
-}
 
 #videos .container .box .text {
     background-color: #fff;
