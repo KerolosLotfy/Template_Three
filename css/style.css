@@ -28,6 +28,7 @@ html {
 
 body {
     font-family: "Cairo", sans-serif;
+    
 }
 
 .container {
@@ -1365,7 +1366,7 @@ nav>ul>li>a:hover {
 }
 
 #videos .container .time-line::-webkit-scrollbar-thumb {
-    background-color: #0005;
+    background-color: var(--main-color);
     border-radius: 50px;
 }
 
@@ -1753,10 +1754,21 @@ nav>ul>li>a:hover {
 }
 
 /********************* End  Foooter *****************************/
+/* loader */
+.custom-loader {
+    width: 100vw;
+    height: 100vh;
+}
 
-
+body.loading *:not(:first-child) {
+    display: none !important;
+}
 
 /********************* Finish *****************************/
 /********************  Finish ********************/
 /********************* Finish ************/
 /********************  Finish ******/
+
+
+
+

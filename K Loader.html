@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K | loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .k_loader {
+            width: 100vw;
+            height: 100vh;
+            background-color: #101a20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .k_loader div {
+            width: 50px;
+            height: 200px;
+            background-color: #2196f3;
+            border-radius: 50px;
+            position: relative;
+            animation: up-and-down .5s ease infinite alternate;
+            box-shadow: inset -20px -17px 10px 0px #fff;
+            zoom: .6;
+        }
+
+
+
+        .k_loader div:first-child {
+            z-index: 5;
+        }
+
+        .k_loader div:nth-child(2) {
+            transform: rotate(60deg) translate(-90px, 20px);
+            transform-origin: bottom;
+            height: 150px;
+            z-index: 2;
+        }
+
+        .k_loader div:nth-child(3) {
+            transform: rotate(-54deg) translate(10px, 15px);
+            transform-origin: bottom;
+            height: 160px;
+        }
+
+        .k_loader div:nth-child(4) {
+            transform: rotate(90deg);
+            width: 20px;
+            position: relative;
+            left: -90px;
+            top: 130px;
+            animation: none;
+            box-shadow: inset 3px -1px 11px 0px #fff;
+        }
+
+        @keyframes up-and-down {
+            0% {
+                margin-bottom: -50px;
+                border-radius: 10px;
+            }
+
+            50% {
+                border-radius: 50px;
+            }
+
+            100% {
+                border-radius: 50px;
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="k_loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

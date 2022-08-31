@@ -17,11 +17,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script async>
+  setTimeout(() => {
+    document.querySelector(".custom-loader").style.display = "none";
+    document.body.classList.remove("loading");
+  }, 2000);
+</script>
 
-<body>
+
+<body class="loading">
+  <!-- loading Animation -->
+  <div class="custom-loader">
+    <iframe src="./K Loader.html" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
   <header>
     <div class="container">
-      <div class="logo"><a href="./index.html">Elzero</a></div>
+      <div class="logo"><a href="./index.html">Kerolos</a></div>
       <nav>
         <ul>
           <li><a href="#articles">Articles</a></li>
@@ -668,11 +679,11 @@
       <div class="box">
         <ul class="counter">
           <li id="days">
-            <div class="count">123</div>
+            <div class="count">1</div>
             <p>Days</p>
           </li>
           <li id="hours">
-            <div class="count">24</div>
+            <div class="count">1</div>
             <p>Hours</p>
           </li>
           <li id="mins">
@@ -817,110 +828,111 @@
     <div class="container">
       <div class="time-line">
         <div class="title">
-          <h3>Top videos</h3>
+          <h3>Time Line</h3>
           <i class="fas fa-random"></i>
         </div>
-        <ul>
+        <ul id="timeLine">
           <li>
-            <p>How To Create Sub Domain</p>
-            <span>05:18</span>
+            <p>Discover The Design</p>
+            <span>00:00</span>
           </li>
           <li>
-            <p>Playing With The DNS</p>
-            <span>03:18</span>
+            <p>Prepare The Project And Design</p>
+            <span>04:45</span>
           </li>
           <li>
-            <p>Everything About The Virtual Hosts</p>
-            <span>05:25</span>
+            <p>Header Section</p>
+            <span>11:45</span>
           </li>
           <li>
-            <p>How To Monitor Your Website</p>
-            <span>04:16</span>
+            <p>Landing Section</p>
+            <span>28:45</span>
           </li>
           <li>
-            <p>Uncharted Beating The Last Boss</p>
-            <span>07:48</span>
+            <p>Mega Menu</p>
+            <span>42:37</span>
           </li>
           <li>
-            <p>Ys Oath In Felghana Overview</p>
-            <span>03:12</span>
+            <p>Create The Main Title</p>
+            <span>1:01:15</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Article Section/p>
+              <span>1:10:26</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Gallery Section</p>
+            <span>1:24:15</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Features Section</p>
+            <span>1:35:10</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Testimonials Section</p>
+            <span>1:57:45</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Team Members Section</p>
+            <span>2:06:55</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Services Section</p>
+            <span>2:25:40</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Our Skills Section</p>
+            <span>2:39:40</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Work Steps Section</p>
+            <span>2:48:05</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Events Section</p>
+            <span>3:01:18</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Pricing Section</p>
+            <span>3:22:05</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Video Section</p>
+            <span>3:41:35</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Statistics Section</p>
+            <span>3:50:36</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Discount Section</p>
+            <span>3:58:36</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Footer Section</p>
+            <span>4:12:47</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>Separators And Shapes</p>
+            <span>4:29:32</span>
           </li>
           <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
-          </li>
-          <li>
-            <p>Ys Series All Games Ending</p>
-            <span>08:10</span>
+            <p>RTL And The End</p>
+            <span>4:36:50</span>
           </li>
         </ul>
       </div>
       <div class="box">
         <div class="video">
-          <img src="./imgs/video-preview.jpg" alt="Image">
+          <!-- <iframe width="100%" height="350px" src="https://www.youtube.com/embed/vkc99WHcDTk"
+            title="[Arabic] HTML And CSS Design 3 In 2022 in One Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> -->
+          <img src="./imgs/videos-01.jpg" alt="">
+
         </div>
         <div class="text">
-          Everything About The Virtual Hosts
+          [Arabic] HTML And CSS Design 3 In 2022 in One Video
         </div>
       </div>
     </div>
@@ -932,22 +944,22 @@
     <div class="container">
       <div class="box">
         <i class="far fa-user fa-2x fa-fw"></i>
-        <h2 class="num" value="150">0</h2>
+        <h2 class="num" id="150">0</h2>
         <p>clients </p>
       </div>
       <div class="box">
         <i class="fas fa-code fa-2x fa-fw"></i>
-        <h2 class="num" value="135">0</h2>
+        <h2 class="num" id="135">0</h2>
         <p>clients </p>
       </div>
       <div class="box">
         <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-        <h2 class="num" value="50">0</h2>
+        <h2 class="num" id="50">0</h2>
         <p>clients </p>
       </div>
       <div class="box">
         <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-        <h2 class="num" value="500">0</h2>
+        <h2 class="num" id="500">0</h2>
         <p>clients </p>
       </div>
     </div>

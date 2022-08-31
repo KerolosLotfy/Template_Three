@@ -33,6 +33,9 @@ function counter() {
                 if (hours.textContent == 0) {
                     hours.textContent = 24;
                     days.textContent -= 1;
+                    if (days.textContent == 0) {
+                        days.textContent = 1;
+                    }
                 }
             }
         }
@@ -45,11 +48,11 @@ function counter() {
 
 
 
-if (window.localStorage.seconds === "" || window.localStorage.seconds === undefined) {
+if (window.localStorage.seconds === "" || window.localStorage.seconds === undefined ) {
     secs.textContent = 60;
     mins.textContent = 60;
-    hours.textContent = 24;
-    days.textContent = 124;
+    hours.textContent = 1;
+    days.textContent = 1;
 } else {
     secs.textContent = window.localStorage.getItem('seconds');
     mins.textContent = window.localStorage.getItem('Minutes');
@@ -78,12 +81,13 @@ scrollUp.addEventListener("click", () => {
 
 // function to increase Numbers of Stats when scrolling to active stats section
 const stats_nums = document.querySelectorAll(".num");
-
+let once = false;
 window.addEventListener("scroll", () => {
     sections.forEach((section) => {
-        if (section.id === "stats" && section.getBoundingClientRect().y <= 0 && section.getBoundingClientRect().y > -50) {
-            increaseNumbers();
-            console.log(section.getBoundingClientRect().y)
+        if (section.id === "stats" && section.getBoundingClientRect().y <= 0 && section.getBoundingClientRect().y > -20) {
+            if (!once) {
+                increaseNumbers();
+            }
         };
     });
 });
@@ -92,13 +96,69 @@ window.addEventListener("scroll", () => {
 function increaseNumbers() {
     stats_nums.forEach((num) => {
         let increase = 0;
-        const finish = parseInt(num.ariaValueMax);
+        const finish = parseInt(num.id);
         let counter = setInterval(() => {
             num.innerHTML = increase++;
             if (num.innerHTML == finish) {
                 clearInterval(counter);
+
             }
         }, 10);
+        once = true;
+    });
+}
+
+
+
+// time Line video
+const timeLine = document.querySelectorAll("#timeLine li");
+const video = document.querySelector(".video iframe")
+
+// timeLine.forEach((time) => {
+//     time.addEventListener("click", () => {
+//         let timeNumber = time.children[time.children.length - 1].textContent;
+//         let t_hrs;
+//         let t_mins;
+//         let t_secs;
+//         let t;
+//         if (timeNumber.split(":").length === 1) {
+//             t_secs = parseInt(timeNumber.split(":")[0]);
+//             t = t_secs;
+//             console.log(t);
+//         } else if (timeNumber.split(":").length === 2) {
+//             t_mins = parseInt(timeNumber.split(":")[0]) * 60;
+//             t_secs = parseInt(timeNumber.split(":")[1]);
+//             t = t_mins + t_secs;
+//             console.log(t);
+//         } else if (timeNumber.split(":").length === 2) {
+//             t_hrs = parseInt(timeNumber.split(":")[0]) * 60 * 60;
+//             t_mins = parseInt(timeNumber.split(":")[1]) * 60;
+//             t_secs = parseInt(timeNumber.split(":")[2]);
+//             t = t_hrs + t_mins + t_secs;
+//             console.log(t);
+//         } else {
+//             console.error("error");
+//         }
+//         video.src += `?t=${t}`;
+//         console.log(video.src);
+//     })
+// })
+
+
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Replace the 'ytplayer' element with an <iframe> and
+// YouTube player after the API code downloads.
+var player;
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+        height: '360',
+        width: '640',
+        videoId: 'M7lc1UVf-VE'
     });
 }
 
