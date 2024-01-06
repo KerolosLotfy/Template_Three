@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll("section");
-// selectation active section when scrolling
+// selection active section when scrolling
 document.onscroll = () => {
     sections.forEach((section) => {
         if (section.getBoundingClientRect().y < 200) {
@@ -80,7 +80,7 @@ scrollUp.addEventListener("click", () => {
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // function to increase Numbers of Stats when scrolling to active stats section
-const stats_nums = document.querySelectorAll(".num");
+const statsNum = document.querySelectorAll(".num");
 let once = false;
 window.addEventListener("scroll", () => {
     sections.forEach((section) => {
@@ -94,7 +94,7 @@ window.addEventListener("scroll", () => {
 
 // increase Numbers function 
 function increaseNumbers() {
-    stats_nums.forEach((num) => {
+    statsNum.forEach((num) => {
         let increase = 0;
         const finish = parseInt(num.id);
         let counter = setInterval(() => {
@@ -145,21 +145,25 @@ const video = document.querySelector(".video iframe")
 // })
 
 
-// Load the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// // Load the IFrame Player API code asynchronously.
+// var tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Replace the 'ytplayer' element with an <iframe> and
-// YouTube player after the API code downloads.
-var player;
-function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-        height: '360',
-        width: '640',
-        videoId: 'M7lc1UVf-VE'
-    });
-}
+// // Replace the 'ytplayer' element with an <iframe> and
+// // YouTube player after the API code downloads.
+// var player;
+// function onYouTubePlayerAPIReady() {
+//     player = new YT.Player('ytplayer', {
+//         height: '360',
+//         width: '640',
+//         videoId: 'M7lc1UVf-VE'
+//     });
+// }
 
 
+// Prevent submit form data
+document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault()
+})

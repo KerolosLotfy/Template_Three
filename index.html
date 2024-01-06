@@ -15,20 +15,23 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"> -->
 </head>
+
 <script async>
-  setTimeout(() => {
-    document.querySelector(".custom-loader").style.display = "none";
-    document.body.classList.remove("loading");
-  }, 2000);
+    window.onload = () => {
+    setTimeout(() => {
+      document.querySelector(".custom-loader").style.display = "none";
+      document.body.classList.remove("loading");
+    }, 2000);
+  }
 </script>
 
 
 <body class="loading">
   <!-- loading Animation -->
   <div class="custom-loader">
-    <iframe src="./K Loader.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe title="k-loader" src="./K Loader.html" frameborder="0" width="100%" height="100%"></iframe>
   </div>
   <header>
     <div class="container">
@@ -39,7 +42,7 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#features">Features</a></li>
           <li>
-            <a href="">Other Links</a>
+            <a href="#" >Other Links</a>
             <div class="other-links">
               <img src="./imgs/megamenu.png" alt="Image">
               <div class="links">
@@ -100,7 +103,7 @@
   <section id="landing">
     <div class="container">
       <div class="text">
-        <h1 class="title">Welocome, to elzero world</h1>
+        <h1 class="title">Welcome, to Elzero world</h1>
         <p class="des">
           Here Iam gonna share everything about my life.
           Books Iam reading, Games Iam Playing, Stories and Events
@@ -405,9 +408,9 @@
     </div>
   </section>
 
-  <!-- Team Memebers section -->
+  <!-- Team Members section -->
   <section id="team">
-    <h1 class="main-title"> Team Memebers</h1>
+    <h1 class="main-title"> Team Members</h1>
     <div class="container">
       <div class="box">
         <div class="data">
@@ -547,7 +550,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-user-shield fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -557,7 +560,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-tools fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -567,7 +570,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-map-marked-alt fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -577,7 +580,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-laptop-code fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -587,7 +590,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-palette fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -597,7 +600,7 @@
       <div class="box">
         <div class="serv">
           <i class="fas fa-bullhorn fa-4x"></i>
-          <h1>Sercuirty</h1>
+          <h1>Security</h1>
         </div>
         <div class="details">
           <a href="#">Details</a>
@@ -703,13 +706,11 @@
         </p>
       </div>
       <div class="subscribe">
-        <form action="">
-          <input type="email" name="Mail" placeholder="Enter Your Email">
+        <form action="" id="form" autocomplete="on">
+          <input type="email" name="Mail" placeholder="Enter Your Email" autocomplete="email">
           <input type="submit" value="Subscribe">
         </form>
       </div>
-    </div>
-
     </div>
   </section>
 
@@ -982,10 +983,10 @@
 
       <div class="req">
         <h1>Request A Discount</h1>
-        <form action="">
-          <input type="text" name="Name" id="name" placeholder="Your Name">
-          <input type="email" name="Mail" id="email" placeholder="Your Email">
-          <input type="text" name="Phone" id="phone" placeholder="Your Phone">
+        <form action="" id="req-form" autocomplete="on">
+          <input type="text" name="Name" id="name" placeholder="Your Name" autocomplete="name">
+          <input type="email" name="Mail" id="email" placeholder="Your Email" autocomplete="email">
+          <input type="text" name="Phone" id="phone" placeholder="Your Phone" autocomplete="te">
           <textarea name="Request" id="request" cols="30" rows="10" placeholder="Tell Us About Your Needs"></textarea>
           <input type="submit" value="Send" id="submit">
         </form>

@@ -3,7 +3,7 @@
     --main-color: #2196f3;
     --sections-bg-color: #ececec;
     --parg-gray-color: #666666;
-    --quailty-color: #f44036;
+    --quality-color: #f44036;
     --time-color: #009688;
     --passion-color: #03a9f4;
     --l-gray: #f3f3f3;
@@ -13,7 +13,7 @@
 
 /*********** End var **********/
 
-/******************** Start Globle **********************/
+/******************** Start Global **********************/
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -28,6 +28,7 @@ html {
 
 body {
     font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
     
 }
 
@@ -35,7 +36,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -133,6 +134,13 @@ h1 {
 
 }
 
+@media screen and (max-width:400px) {
+    .main-title {
+        max-width: 100%;
+        font-size: 22px;
+    }
+}
+
 .des {
     color: var(--parg-gray-color);
     line-height: 40px;
@@ -151,7 +159,7 @@ h1 {
     height: max-content !important;
 }
 
-/****************** End Globle ************************/
+/****************** End Global ************************/
 
 
 /****************** Start header *********************/
@@ -524,7 +532,7 @@ nav>ul>li>a:hover {
 }
 
 #features .container .feat:first-child .image::before {
-    background-color: var(--quailty-color);
+    background-color: var(--quality-color);
 }
 
 #features .container .feat:nth-child(2) .image::before {
@@ -561,7 +569,7 @@ nav>ul>li>a:hover {
 }
 
 #features .container .feat:first-child h1 {
-    border-bottom: 5px solid var(--quailty-color);
+    border-bottom: 5px solid var(--quality-color);
 }
 
 #features .container .feat:nth-child(2) h1 {
@@ -600,12 +608,12 @@ nav>ul>li>a:hover {
 }
 
 #features .container .feat:first-child .btn {
-    border-color: var(--quailty-color);
-    color: var(--quailty-color);
+    border-color: var(--quality-color);
+    color: var(--quality-color);
 }
 
 #features .container .feat:first-child .btn::before {
-    background-color: var(--quailty-color);
+    background-color: var(--quality-color);
 }
 
 #features .container .feat:nth-child(2) .btn {
@@ -1076,6 +1084,21 @@ nav>ul>li>a:hover {
     justify-content: center;
     align-items: center;
     align-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media screen and (max-width:420px) {
+    #events .container {
+        display: block;
+    }
+
+    #events form {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 20px;
+        justify-content: center;
+    }
 }
 
 #events .container::before,
@@ -1123,10 +1146,11 @@ nav>ul>li>a:hover {
     gap: 30px;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 #events .container .box ul {
-    display: flex;
+    display: flex;    
 }
 
 #events .container .box ul li {
@@ -1753,11 +1777,12 @@ nav>ul>li>a:hover {
     visibility: visible !important;
 }
 
-/********************* End  Foooter *****************************/
+/********************* End  Footer *****************************/
 /* loader */
 .custom-loader {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 body.loading *:not(:first-child) {
